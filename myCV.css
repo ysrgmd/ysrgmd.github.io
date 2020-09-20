@@ -3,17 +3,10 @@
     padding: 0;
     box-sizing: border-box;
 }
-/*
-body{
-    
-    background-color: gray;
-}
-*/
+
 /*///////////////////////
 * Heading levels
 ////////////////////////*/
-
-
 
 h1, h2, h3, h4, h5, h6 {
     font: 300 46px/1.2 'Montserrat', serif, sans-serif;
@@ -23,16 +16,6 @@ a, a > * {
     outline: none;
     cursor: pointer;
     text-decoration: none;
-}
-
-/*///////////////////////
-* Heading level 1
-////////////////////////*/
-
-.text h1 {
-    font-weight: bold;
-    font-size: 64px;
-    margin: 5px 0 15px;
 }
 
 /*///////////////////////
@@ -64,9 +47,21 @@ a.nav-link:hover{
  }
 
 @media (max-width: 992px) {
-    .navbar-light.bg-transparent{
-       background-color: #fff !important;
+    .fixed-top {
+        background-color: transparent !important;
      }
+
+     .navbar-light .navbar-nav .nav-link.active{
+        border: none;
+      }
+
+}
+
+@media (max-width: 576px){
+    .container{
+        padding-right: 15px !important;
+        padding-left: 15px !important;
+    }
 }
 
 /*///////////////////////
@@ -122,6 +117,34 @@ a.nav-link:hover{
     text-decoration-style: none;
 }
 
+#sec-home img{
+    margin: 0px; 
+    padding: 0px; 
+    border: none; 
+    max-height: none; 
+    max-width: none; 
+    z-index: -999999; 
+    width: 1349px; 
+    height: 100vh; 
+    left: 0px;
+}
+
+.text h1 {
+    font-weight: bold;
+    font-size: 64px;
+    margin: 5px 0 15px;
+}
+
+@media (max-width:767.98px) {
+    .text h1 {
+        font-size: 40px;
+    }
+
+    .typewrite{
+        font-size: 30px;
+    }
+}
+
 /*///////////////////////
 * Profil
 ////////////////////////*/
@@ -129,7 +152,13 @@ a.nav-link:hover{
 .card.hidden{
     opacity: 0;
     transform: translateX(-20px);
-    transition: all 0.5s ease;
+    transition: all 1s ease;
+}
+
+.card.display{
+    opacity: 1;
+    transform: translateX(0px);
+    transition: all 1s ease;
 }
 
 /*
@@ -189,9 +218,6 @@ a.nav-link:hover{
     border-radius: 3px;
     width: 70%;
 }
-
-
-/*******/
 
 .other-skills-title{
     text-align: center;
@@ -344,8 +370,8 @@ a.nav-link:hover{
         transform: rotate(0deg);
     }
     100%{
-        -webkit-transform: rotate(144deg);
-        transform: rotate(144deg);
+        -webkit-transform: rotate(150deg);
+        transform: rotate(150deg);
     }
 }
 
@@ -358,8 +384,8 @@ a.nav-link:hover{
         transform: rotate(0deg);
     }
     100%{
-        -webkit-transform: rotate(90deg);
-        transform: rotate(90deg);
+        -webkit-transform: rotate(30deg);
+        transform: rotate(30deg);
     }
 }
 
@@ -373,8 +399,8 @@ a.nav-link:hover{
         transform: rotate(0deg);
     }
     100%{
-        -webkit-transform: rotate(110deg);
-        transform: rotate(110deg);
+        -webkit-transform: rotate(10deg);
+        transform: rotate(10deg);
     }
 }
 
@@ -397,7 +423,7 @@ a.nav-link:hover{
     .progress-circle{ margin-bottom: 20px; }
 }
 
-*/
+
 
 /*///////////////////////
 * preloader
@@ -677,27 +703,24 @@ h3 a {
 * footer
 ////////////////////////*/
 
-
 .fab:hover {  
     animation: icons-contact 3s infinite;
  }
 
- @keyframes icons-contact {
+@keyframes icons-contact {
     0%   {transform: rotate(0deg);}
     100% {transform: rotate(360deg);}
-  }
+}
 
 /*///////////////////////
 * portfolio
 ////////////////////////*/
 
-/*
-.row{
+.row-portfolio{
     justify-content: space-between;
     margin-top: 30px;
     margin-bottom: 30px
 }
-*/
 
 .box-portfolio{
     background-color: black; 
@@ -791,9 +814,58 @@ h3 a {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='black' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
 }
 
+@media (max-width: 767px) {
+    
+    div.col-portfolio{
+        padding: 15px;
+        padding-left: 50px !important;
+    }
+
+    .row-portfolio{
+        margin-top: 0px;
+        margin-bottom: 0px
+    }
+}
+
 /*///////////////////////
-* jaja
+* contact
 ////////////////////////*/
+
+.col-contact h6{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.col-contact p{
+    font-size: 16px;
+}
+
+@media (max-width: 991px) {
+    
+    .row-footer > div{
+        padding-bottom: 15px;
+    }
+
+    .col-contact{
+        width: 100%;
+    }
+    .col-contact p{
+        margin-left: auto;
+        margin-right: auto;
+        width: 15em;
+    }
+
+    .col-contact h6{
+        margin-left: auto;
+        margin-right: auto;
+        width: 10em;
+        font-size: 28px;
+        font-weight: bold;
+    }
+}
+
+
+
 
 @media (max-width:767.98px) {
     .padding {
